@@ -1,0 +1,26 @@
+- defaultTab: nodes
+  description: |
+    Get Rundeck PID
+  executionEnabled: true
+  loglevel: INFO
+  name: Rundeck PID
+  nodeFilterEditable: true
+  schedule:
+    month: '*'
+    time:
+      hour: '0'
+      minute: '0'
+      seconds: '0'
+    weekday:
+      day: mon
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: |-
+        #!/bin/bash
+        pid=`ps -aux | grep -i ^rundeck | awk '{print $2}'`
+
+        echo "Rundeck PID is: ${pid}"
+    keepgoing: false
+    strategy: node-first

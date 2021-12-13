@@ -1,0 +1,11 @@
+192.168.0.3:
+  description: Centos server node
+  hostname: 192.168.0.3
+  nodename: 192.168.0.3
+  osArch: x86_64
+  osFamily: unix
+  osName: CentOS 7
+  osVersion: 7.9
+  tags: 'name=centos'
+  username: josegre
+  ssh-keypath: keys/id_rsa

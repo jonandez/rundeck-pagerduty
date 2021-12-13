@@ -1,0 +1,26 @@
+- defaultTab: nodes
+  description: |
+    Get IP and Hostname
+  executionEnabled: true
+  loglevel: INFO
+  name: Get IP and Hostname
+  nodeFilterEditable: true
+  nodefilters:
+    dispatch:
+      threadcount: 1
+      keepgoing: false
+      excludePrecedence: true
+      rankAttribute: rank
+      rankOrder: descending
+    filter: 'tags:name=centos'
+  sequence:
+    commands:
+    - script: |-
+        #!/bin/bash
+        ip=`hostname -I | awk '{print$1}'`
+        hostname=`hostname`
+
+        echo "Hostname is: ${hostname}"
+        echo "IP is: ${ip}"
+    keepgoing: false
+    strategy: node-first

@@ -1,0 +1,13 @@
+name: hello-world-plugin
+version: 0.1
+rundeckPluginVersion: 1.2
+author: Jose Hernandez
+date: 2021-12-12 #ISO8601 YYYY-MM-DD
+url: github.com/jonandez
+providers:
+  - name: provider
+    service: NodeExecutor
+    plugin-type: script
+    script-interpreter: /bin/bash
+    script-file: script.sh
+    script-args: ${job.name}
