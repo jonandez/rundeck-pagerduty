@@ -1,7 +1,5 @@
 # Rundeck PagerDuty Assignment
 
-Foobar is a Python library for dealing with word pluralization.
-
 ### JOBS
 
 1. Gets Rundeck PID and echo it.
